@@ -26,7 +26,7 @@ jobs:
           organization: shekar-org1 
           projectKey: actions2
           login: squ_418a012ed6353d92a36a4137131353f1f84a7be9
-          generateSarifFile: true 
+          generateSarifFile: false
           failOnRedQualityGate: false 
       - name: Run Codescan On PR 
         if: github.event_name == 'pull_request' 
@@ -37,7 +37,7 @@ jobs:
           projectKey: actions2
           login: squ_418a012ed6353d92a36a4137131353f1f84a7be9
           scanChangedFilesOnly: true 
-          generateSarifFile: true 
+          generateSarifFile: fasle
           failOnRedQualityGate: false
           args: | 
             sonar.pullrequest.branch=${{github.head_ref}} 
